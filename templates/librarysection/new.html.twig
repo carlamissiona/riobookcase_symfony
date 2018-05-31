@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Librarysection{% endblock %}
+
+{% block body %}
+    <h1>Create new Librarysection</h1>
+
+    {{ include('librarysection/_form.html.twig') }}
+
+    <a href="{{ path('librarysection_index') }}">back to list</a>
+{% endblock %}

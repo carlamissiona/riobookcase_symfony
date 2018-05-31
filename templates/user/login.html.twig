@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Login For Site Admin  not updating {% endblock %}
+
+{% block body %}
+      {{ form_crypt }}
+      <form action="/login/check" method="POST"> 
+        <div  class="form-row">
+          <div  class="form-group">
+            <label  for="username">Username</label>
+            <input  class="form-control" id="username" name="username" placeholder="Admin" type="text">
+          </div>
+         
+        </div>
+        <div class="form-row"> 
+          <div  class="form-group">
+            <label  for="password">Password</label>
+            <input  class="form-control" id="password" name="password" type="password">
+            <input  class="form-control"  value="{{ form_crypt }}" name="form_hash" type="hidden">
+          </div>
+        </div>
+        <button type="submit">Login</button>
+      </form> 
+    
+{% endblock %}

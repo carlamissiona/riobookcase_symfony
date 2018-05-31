@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit User{% endblock %}
+
+{% block body %}
+    <h1>Login For Site Admin</h1>
+
+      <form action="/login_check" method="POST"> 
+        <div  class="form-row">
+          <div  class="form-group">
+            <label  for="username">Username</label>
+            <input  class="form-control" id="username" placeholder="Admin" type="text">
+          </div>
+         
+        </div>
+        <div class="form-row"> 
+          <div  class="form-group">
+            <label  for="password">Password</label>
+            <input  class="form-control" id="password" type="password">
+          </div>
+        </div>
+        <button type="submit">Login</button>
+      </form>
+        
+     
+    
+{% endblock %}
